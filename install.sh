@@ -7,8 +7,10 @@ mv config ~/.config/i3
 
 mv charlimagne .config
 
-mv Untitled.bashrc .bashrc
+mv polybar .config
 
-sudo pacman -S kitty neofetch unzip net-tools xorg-xrandr
+mv Untitled.bashrc ~/.bashrc
 
-bash <(curl https://end-4.github.io/dots-hyprland-wiki/setup.sh
+sudo pacman -S kitty neofetch unzip net-tools polybar
+
+bash <(curl https://end-4.github.io/dots-hyprland-wiki/setup.sh)

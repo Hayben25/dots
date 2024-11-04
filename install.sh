@@ -5,7 +5,7 @@ echo "remember to go to about:config and change the toolkit.legacyUserProfileCus
 
 mv config ~/.config/i3
 
-mv charlemagne .config
+mv charlimagne .config
 
 mv Untitled.bashrc .bashrc
 

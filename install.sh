@@ -7,6 +7,8 @@ mv config ~/.config/i3
 
 mv charlemagne .config
 
+mv Untitled.bashrc .bashrc
+
 sudo pacman -S kitty neofetch unzip net-tools xorg-xrandr
 
 bash <(curl https://end-4.github.io/dots-hyprland-wiki/setup.sh

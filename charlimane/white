@@ -194,19 +194,8 @@ client.placeholder      #FFFFFF #0C0C0C #FFFFFF #FFFFFF   #FFFFFF
 
 client.background       #FFFFFF
 
-bar {
-  colors {
-    background #000000
-    statusline #FFFFFF
-    separator  #666666
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-    focused_workspace  #FFFFFF #FFFFFF #000000
-    active_workspace   #333333 #222222 #000000
-    inactive_workspace #333333 #222222 #888888
-    urgent_workspace   #2F343A #900000 #000000
-    binding_mode       #2F343A #900000 #000000
-  }
-}
 
 bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#FFFFFF' -sf '#000000' -fn 'monospace-10' -p 'dmenu prompt &gt;'"
 

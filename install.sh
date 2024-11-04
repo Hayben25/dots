@@ -11,6 +11,10 @@ mv polybar .config
 
 mv Untitled.bashrc ~/.bashrc
 
-sudo pacman -S kitty neofetch unzip net-tools polybar
+sudo pacman -S kitty neofetch unzip net-tools polybar spotify-launcher
+
+spotify-launcher
+
+curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
 
 bash <(curl https://end-4.github.io/dots-hyprland-wiki/setup.sh)

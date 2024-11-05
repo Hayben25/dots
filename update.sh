@@ -16,3 +16,5 @@ cp .bashrc ~
 
 rm -r ~/.mozilla/firefox/*e/chrome
 cp -r ~/.mozilla/firefox/*e/chrome
+
+mv keybinds.conf ~/.config/hypr/custom

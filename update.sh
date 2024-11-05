@@ -21,4 +21,4 @@ cp -r chrome ~/.mozilla/firefox/*e
 
 cp keybinds.conf ~/.config/hypr/custom
 
-polybar-msg cmd quit && polybar -r example 2>&1 | tee -a /tmp/polybar1.log & disown
+polybar && polybar-msg cmd quit && polybar -r example 2>&1 | tee -a /tmp/polybar1.log & disown

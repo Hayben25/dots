@@ -185,7 +185,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-exec_always --no-startup-id polybar-msg cmd quit && polybar -r example 2>&1 | tee -a /tmp/polybar1.log & disown
+exec_always update
 
 
 set_from_resource $c i3wm.color #808080

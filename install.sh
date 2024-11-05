@@ -11,7 +11,7 @@ mv polybar .config
 
 mv Untitled.bashrc ~/.bashrc
 
-sudo pacman -S kitty neofetch unzip net-tools polybar spotify-launcher
+sudo pacman -S kitty neofetch unzip net-tools polybar spotify-launcher jdk-openjdk docker
 
 spotify-launcher
 

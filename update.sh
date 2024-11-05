@@ -6,6 +6,8 @@ rm -r ~/.config/charlimane
 cp -r polybar ~/.config
 cp -r charlimane ~/.config
 
+chmod +x ~/.config/charlimane/change.sh
+
 cp config ~/.config/i3
 
 rm -r ~/backgrounds

@@ -1,4 +1,5 @@
 #!/bin/bash
+git pull
 
 rm -r ~/.config/polybar
 rm -r ~/.config/charlimane

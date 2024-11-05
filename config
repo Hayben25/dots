@@ -186,6 +186,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 exec_always --no-startup-id polybar-msg cmd quit && polybar -r example 2>&1 | tee -a /tmp/polybar1.log & disown
+exec_always restart
 
 
 set_from_resource $c i3wm.color #808080

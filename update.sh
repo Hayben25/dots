@@ -15,6 +15,6 @@ cp -r backgrounds ~
 cp .bashrc ~
 
 rm -r ~/.mozilla/firefox/*e/chrome
-cp -r ~/.mozilla/firefox/*e/chrome
+cp -r chrome ~/.mozilla/firefox/*e
 
 cp keybinds.conf ~/.config/hypr/custom

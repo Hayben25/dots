@@ -1,38 +1,32 @@
-#!/bin/bash
+#! /bin/bash
 
-mv ~/chrome ~/.mozilla/firefox/*e
-echo "remember to go to about:config and change the toolkit.legacyUserProfileCustomizations.stylesheets to true"
+export base="$(pwd)"
 
-mv config ~/.config/i3
+if ! command -v pacman >/dev/null 2>&1; then
+  printf "\e[31m[$0]: pacman not found, it seems that the system is not ArchLinux or Arch-based distros. Aborting...\e[0m\n"
+  exit 1
+fi
 
-mv charlimagne .config
+pacman -S fish firefox base-devel bluetui bluez-utils brightnessctl efibootmgr fastfetch firefox fish ghostty grub htop mako pulseaudio pulseaudio-alsa pulseaudio-bluetooth sway sway-bg swayidle swaylock tldr tofi ttf-jetbrains-mono-nerd ufw unzip waybar xorg-xwayland networkmanager
 
-mv polybar .config
+read -sp "What is the name of your user:: " name
 
-mv Untitled.bashrc ~/.bashrc
+useradd --shell /bin/fish --group wheel $name
 
-sudo pacman -S kitty neofetch unzip net-tools polybar spotify-launcher jdk-openjdk docker
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
-spotify-launcher
+yay -S python-pywal16 python-pywalfox
 
-curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+mkdir /home/$name/.config
 
-cd ~
+mkdir /home/$name/code
 
-mkdir code
+mv yay /home/$name/code/
 
-cd code
+cd ..
 
-mkdir dots
+mv dots /home/$name/code/
 
-git clone https://gist.github.com/208fe1accd2219507b07a5e250a91df0.git
+cp -r /home/$name/code/dots/config/* /home/$name/.config/
 
-cd dots
-
-git clone https://github.com/Hayben25/dots.git
-
-chmod +x ~/code/dots/update.sh
-
-./update.sh
-
-bash <(curl https://end-4.github.io/dots-hyprland-wiki/setup.sh)
+cp -r /home/$name/code/dots/backgrounds /home/$name/Backgrounds

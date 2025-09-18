@@ -11,30 +11,30 @@ pacman -S fish firefox base-devel bluetui bluez-utils brightnessctl vi efibootmg
 
 systemctl enable NetworkManager
 
-read -sp "What is the name of your user:: " name
+useradd -m --shell /bin/fish --group wheel hayden
 
-useradd -m --shell /bin/fish --group wheel $name
+passwd hayden
 
-passwd $name
+su hayden
 
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
 yay -S python-pywal16 python-pywalfox tofi
 
-mkdir /home/$name/.config
+mkdir /home/hayden/.config
 
-mkdir /home/$name/code
+mkdir /home/hayden/code
 
-mv yay /home/$name/code/
+mv yay /home/hayden/code/
 
 cd ..
 
-mv /dots /home/$name/code/
+mv /dots /home/hayden/code/
 
-cp -r /home/$name/code/dots/config/* /home/$name/.config/
+cp -r /home/hayden/code/dots/config/* /home/$name/.config/
 
-cp -r /home/$name/code/dots/backgrounds /home/$name/Backgrounds
+cp -r /home/hayden/code/dots/backgrounds /home/$name/Backgrounds
 
-cp /home/$name/code/dots/pacman.conf /etc/pacman.conf
+cp /home/hayden/code/dots/pacman.conf /etc/pacman.conf
 
 echo "install grub using grub-install /dev/boot_drive && grub-mkconfig -o /boot/grub/grub.cfg"

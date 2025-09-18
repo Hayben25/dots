@@ -1,26 +1,5 @@
 #! /bin/bash
 
-export base="$(pwd)"
-
-read -sp "What region is your timezone:: " region
-read -sp "What subregion is your timezone:: " subregion
-
-ln -sf /usr/share/zoneinfo/$region/$subregion /etc/localtime
-
-$locale = "en_US.UTF-8 UTF-8"
-
-echo $locale >/etc/locale.gen
-
-locale-gen
-
-$locale1 = "LANG=en_US.UTF-8"
-
-echo $locale1 >/etc/locale.conf
-
-read -sp "What is your hostname:: " hostname
-
-echo $hostname >/etc/hostname
-
 passwd
 
 if ! command -v pacman >/dev/null 2>&1; then
@@ -50,12 +29,12 @@ mv yay /home/$name/code/
 
 cd ..
 
-mv dots /home/$name/code/
+mv /dots /home/$name/code/
 
 cp -r /home/$name/code/dots/config/* /home/$name/.config/
 
 cp -r /home/$name/code/dots/backgrounds /home/$name/Backgrounds
 
-cp /home/$name/code/dots/pacman.conf /etc/
+cp /home/$name/code/dots/pacman.conf /etc/pacman.conf
 
 echo "install grub using grub-install /dev/boot_drive && grub-mkconfig -o /boot/grub/grub.cfg"

@@ -28,7 +28,7 @@ if ! command -v pacman >/dev/null 2>&1; then
   exit 1
 fi
 
-pacman -S fish firefox base-devel bluetui bluez-utils brightnessctl vi efibootmgr fastfetch firefox fish ghostty grub htop mako pulseaudio pulseaudio-alsa pulseaudio-bluetooth sway sway-bg swayidle swaylock tldr tofi ttf-jetbrains-mono-nerd ufw unzip waybar xorg-xwayland networkmanager
+pacman -S fish firefox base-devel bluetui bluez-utils brightnessctl vi efibootmgr fastfetch firefox fish ghostty grub htop mako pulseaudio pulseaudio-alsa pulseaudio-bluetooth sway swaybg swayidle swaylock tldr ttf-jetbrains-mono-nerd ufw unzip waybar xorg-xwayland networkmanager
 
 systemctl enable NetworkManager
 
@@ -40,7 +40,7 @@ passwd $name
 
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
-yay -S python-pywal16 python-pywalfox
+yay -S python-pywal16 python-pywalfox tofi
 
 mkdir /home/$name/.config
 

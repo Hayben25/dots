@@ -1,24 +1,7 @@
 font-size=11
+theme= iTerm2 Solarized Dark
 scrollback-limit=5_000
 window-decoration=false
 shell-integration=fish
 font-size=20
 font-family="JetBrainsMonoNerdFont"
-palette = 0=#0b0c1a
-palette = 1=#423E42
-palette = 2=#2A4B64
-palette = 3=#5B5859
-palette = 4=#8E7158
-palette = 5=#AF906E
-palette = 6=#55708B
-palette = 7=#c2c2c5
-palette = 8=#5a5c6f
-palette = 9=#423E42
-palette = 10=#2A4B64
-palette = 11=#5B5859
-palette = 12=#8E7158
-palette = 13=#AF906E
-palette = 14=#55708B
-palette = 15=#c2c2c5
-background = #0b0c1a
-foreground = #c2c2c5

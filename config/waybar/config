@@ -39,7 +39,7 @@
 
     "clock": {
         "format": "{:%a %b %e  %R}",
-        "interval": 30
+        "interval": 60
 },
 
     
@@ -56,15 +56,18 @@
         "format": "{icon}   {capacity}%",
         "format-good": "{icon}   {capacity}%", 
         "format-full": "   {capacity}%",
+        "format-critical": "{icon} {capacity}%",
         "format-icons": ["", "", "", "", ""],
-        "interval": 30
+        "interval": 30,
+        "tooltip-format" : "{timeTo}, health: {health}%, power: {power} watts"
 },
 
 
     "network": {
-        "interface": "wlp4s0", 
-        "format-wifi": "   WiFi-On",
-        "format-disconnected": "睊   Disconnected",
+        "interface": "wlan0", 
+        "format-wifi": "   {signalStrength}",
+        "format-disconnected": "Disconnected",
+        "tooltip-format": "{ifname} - {ipaddr} down: {bandwidthDownBytes} up: {bandwidthUpBytes}", 
         "interval": 60
 },
 

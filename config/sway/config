@@ -1,8 +1,11 @@
 include "$HOME/.cache/wal/colors-sway"
+exec_always touch /run/user/1000/openrc/softlevel && openrc -U
+exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 # Default config for sway
 client.focused $color0 $background $foreground $color7 $background
 # Copy this to ~/.config/sway/config and edit it to your liking.
 gaps inner 5
+seat seat0 xcursor_theme default 24
 #
 # Read `man 5 sway` for a complete reference.
 for_window [app_id="firefox" title="^Picture-in-Picture$"] \
@@ -21,9 +24,9 @@ set $term ghostty
 # Your preferred application launcher
 
 ### Output configuration
-output eDP-1 bg ~/Backgrounds/1920x1200.jpg stretch
+output eDP-1 background /home/hayden/Backgrounds/main3840x2160.png center
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output DP-1 bg ~/Backgrounds/3840x2160.jpg stretch
+output DP-1 background ~/Backgrounds/main3840x2160.png stretch
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
@@ -34,10 +37,10 @@ output DP-1 bg ~/Backgrounds/3840x2160.jpg stretch
 #
 # Example configuration:
 #
- exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+      timeout 300 'swaylock -f -c 000000' \
+      timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+      before-sleep 'swaylock -f -c 000000' 
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -72,7 +75,7 @@ output DP-1 bg ~/Backgrounds/3840x2160.jpg stretch
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec tofi-run | xargs swaymsg exec --
+    bindsym $mod+d exec rofi -show run -theme-str 'listview { scrollbar: false; }' 
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.

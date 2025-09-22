@@ -1,13 +1,13 @@
-@import '/home/hayden/.cache/wal/colors-waybar.css';
 * {
     font-family: "JetBrains Mono Nerd Font";
     font-size: 16px;
 }
 
 
-window#waybar { 
-    background-color: @background; 
-    color: @foreground;    
+window#waybar {
+
+    background-color: #002b36; 
+    color: #cb4b16;    
 }
 
 
@@ -68,10 +68,6 @@ window#waybar.empty #window {
 	color: transparent;
 }
 
-
-window#waybar.empty {
-	background-color: @background;
-}
 
 
 #network, #temperature, #backlight, #pulseudio, #battery {

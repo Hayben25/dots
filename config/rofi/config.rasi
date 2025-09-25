@@ -1,4 +1,3 @@
-@import "~/.cache/wal/colors-rofi-dark"
 configuration {
 /*	modes: "window,drun,run,ssh";*/
 font: "jetbrains mono nerd 20";
@@ -167,3 +166,5 @@ font: "jetbrains mono nerd 20";
       sorting-method:    "name";
   }
 }
+
+@theme "/usr/share/rofi/themes/solarized_alternate.rasi"

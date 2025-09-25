@@ -4,9 +4,9 @@
     "height": 27,
 
 
-    "modules-left": ["sway/workspaces", "custom/scratch", "sway/mode", "sway/window"],
-    "modules-center": [],
-    "modules-right": ["network", "temperature", "backlight", "pulseaudio", "battery", "clock", "tray"],
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+    "modules-center": ["backlight", "clock", "pulseaudio"],
+    "modules-right": ["network", "temperature", "battery", "tray"],
 
 
 	"sway/workspaces": {
@@ -22,13 +22,6 @@
 },
 
 
-	"custom/scratch": {
-   		"interval": 3,
-   		"exec": "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 0)'",
-   		"format": "^{}", 
-   		"on-click": "swaymsg 'scratchpad show'",
-   		"on-click-right": "swaymsg 'move scratchpad'"
-},
 
 
     "tray": {
@@ -64,10 +57,10 @@
 
 
     "network": {
-        "interface": "wlan0", 
+        "interface": "wlp2s0", 
         "format-wifi": "   {signalStrength}",
         "format-disconnected": "Disconnected",
-        "tooltip-format": "{ifname} - {ipaddr} down: {bandwidthDownBytes} up: {bandwidthUpBytes}", 
+        "tooltip-format": "{ifname} - {ipaddr}", 
         "interval": 60
 },
 
@@ -82,24 +75,20 @@
 
 	"backlight": {
     	"device": "intel_backlight",
-    	"format": "{icon}  {percent}%  ",
-    	"format-icons": ["","","",""],
+    	"format": "{icon}  {percent}%",
+    	"format-icons": ["\udb80\udcde", "\udb80\udcdd", "\udb80\udcdf", "\udb80\u00e0"],
     	"interval": 60
 },
 
 
     "pulseaudio": {
         "format": "{icon}  {volume}%  ",
-        "format-bluetooth": "  {volume}%  ",
-        "format-muted":"婢  Mute  ",
+        "format-bluetooth": "\uf0af {volume}%  ",
+        "format-muted":"\ueee8  Mute",
         "interval": 60,
-
-        "format-icons": {
-        "default": [""]
+        "format-icons":["\uf026","\uf027","\uf028"]
 },
             
-       "on-click": "blueman-manager"    
-
 
 }
 

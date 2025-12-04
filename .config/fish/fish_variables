@@ -1,0 +1,50 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25
+SETUVAR FZF_DISABLE_KEYBINDINGS:0
+SETUVAR FZF_LEGACY_KEYBINDINGS:1
+SETUVAR FZF_PREVIEW_DIR_CMD:ls
+SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
+SETUVAR FZF_TMUX_HEIGHT:40\x25
+SETUVAR __fish_initialized:3800
+SETUVAR --export fish_color_autosuggestion:5a5c6f
+SETUVAR --export fish_color_cancel:433E43\x1e\x2d\x2dreverse
+SETUVAR --export fish_color_command:284A64
+SETUVAR --export fish_color_comment:5a5c6f
+SETUVAR --export fish_color_cwd:284A64
+SETUVAR --export fish_color_cwd_root:433E43
+SETUVAR --export fish_color_end:5C5859
+SETUVAR --export fish_color_error:433E43
+SETUVAR --export fish_color_escape:B2906E
+SETUVAR --export fish_color_history_current:\x2d\x2dbold
+SETUVAR --export fish_color_host:8F7158
+SETUVAR --export fish_color_host_remote:8F7158
+SETUVAR --export fish_color_keyword:B2906E
+SETUVAR --export fish_color_normal:c2c2c5
+SETUVAR --export fish_color_operator:526F8B
+SETUVAR --export fish_color_option:5C5859
+SETUVAR --export fish_color_param:8F7158
+SETUVAR --export fish_color_quote:5C5859
+SETUVAR --export fish_color_redirection:B2906E
+SETUVAR --export fish_color_search_match:\x2d\x2dbackground\x3d5a5c6f
+SETUVAR --export fish_color_selection:\x2d\x2dbackground\x3d5a5c6f
+SETUVAR --export fish_color_status:433E43
+SETUVAR --export fish_color_user:284A64
+SETUVAR --export fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_greeting:
+SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_pager_color_background:0b0c1a
+SETUVAR --export fish_pager_color_completion:c2c2c5
+SETUVAR --export fish_pager_color_description:5a5c6f
+SETUVAR --export fish_pager_color_prefix:284A64
+SETUVAR --export fish_pager_color_progress:5a5c6f
+SETUVAR fish_pager_color_secondary_background:0b0c1a
+SETUVAR fish_pager_color_secondary_completion:c2c2c5
+SETUVAR fish_pager_color_secondary_description:5a5c6f
+SETUVAR fish_pager_color_secondary_prefix:284A64
+SETUVAR --export fish_pager_color_selected_background:\x2d\x2dbackground\x3d5a5c6f
+SETUVAR fish_pager_color_selected_completion:c2c2c5
+SETUVAR fish_pager_color_selected_description:5a5c6f
+SETUVAR fish_pager_color_selected_prefix:284A64
+SETUVAR fish_user_paths:/home/hayden/\x2elocal/share/flatpak/exports/bin\x1e/var/lib/flatpak/exports/bin\x1e/home/hayden/\x2elocal/bin\x1e/sbin\x1e/usr/sbin\x1e/usr/bin
+SETUVAR theme_color_scheme:solarized

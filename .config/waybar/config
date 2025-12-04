@@ -1,0 +1,105 @@
+{
+	"layer": "top",	
+	"position": "bottom",
+    "height": 27,
+
+
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+    "modules-center": ["backlight", "clock", "pulseaudio"],
+    "modules-right": ["network", "temperature", "battery", "custom/media" ,"tray"],
+	"custom/media": {
+    	"format": "{icon} {}",
+    	"escape": true,
+    	"return-type": "json",
+	    "max-length": 40,
+	    "on-click": "playerctl play-pause",
+	    "on-click-right": "playerctl stop",
+	    "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
+	    "on-scroll-up": "playerctl next",
+	    "on-scroll-down": "playerctl previous",
+	    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
+},
+				
+	"sway/workspaces": {
+        "disable-scroll": true,
+        "disable-markup": true,
+        "format": "{index}" 
+},
+
+
+	"sway/window": {
+    	"format": "{}",
+    	"max-length": 150
+},
+
+
+
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 15
+},
+
+
+    "clock": {
+        "format": "{:%a %b%e  %R}",
+        "interval": 60
+},
+
+    
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+              "full": 99,
+              "good": 98,
+              "normal": 98,
+              "warning": 20,
+              "critical": 20
+},
+
+        "format": "{icon}   {capacity}%",
+        "format-good": "{icon}   {capacity}%", 
+        "format-full": "   {capacity}%",
+        "format-critical": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 30,
+        "tooltip-format" : "{timeTo}, health: {health}%, power: {power} watts"
+},
+
+
+    "network": {
+        "interface": "wlp2s0", 
+        "format-wifi": "   {signalStrength}",
+        "format-disconnected": "Disconnected",
+        "tooltip-format": "{ifname} - {ipaddr}", 
+        "interval": 60
+},
+
+    "temperature": {
+	   	"thermal-zone": 0,
+		"format": "{icon} {temperatureC}°C",
+		"format-icons":[""],
+		"interval": 30
+},
+
+
+	"backlight": {
+    	"device": "intel_backlight",
+    	"format": "{icon}  {percent}%",
+    	"format-icons": ["\udb80\udcde", "\udb80\udcdd", "\udb80\udcdf", "\udb80\u00e0"],
+    	"interval": 60
+},
+
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%  ",
+        "format-bluetooth": "\uf0af {volume}%  ",
+        "format-muted":"\ueee8  Mute",
+        "interval": 60,
+        "format-icons":["\uf026","\uf027","\uf028"]
+},
+            
+
+}
+
+}

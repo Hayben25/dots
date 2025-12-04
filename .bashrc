@@ -1,5 +1,0 @@
-alias charlimane='cd ~/.config/char* && ./change.sh && i3-msg reload'
-alias update='cd ~/code/dots && chmod +x update.sh && ./update.sh'
-alias edit-in-kitty='kitten edit-in-kitty'
-alias grep='grep --color=auto'
-alias ls='ls --color=auto'

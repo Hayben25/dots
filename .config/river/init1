@@ -1,0 +1,20 @@
+#! /bin/sh
+
+riverctl spawn rivertile
+riverctl output-layout rivertile
+swaybg -i /home/hayden/backgrounds/3840x2160.png
+riverctl map normal Super Return spawn ghostty
+
+riverctl map normal Super+Shift Q close
+
+riverctl map normal Super+Shift E exit
+
+riverctl map normal Super d exec tofi-drun | xargs swaymsg exec --
+
+riverctl map normal Super f exec librewolf
+
+riverctl map normal Super Space toggle-float
+riverctl map normal Super+Shift F toggle-fullscreen
+
+riverctl map normal Super Right focus-view next
+riverctl map normal Super Left focus-view previous

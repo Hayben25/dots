@@ -198,7 +198,7 @@ bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
+    bindsym Print exec grim - | wl-copy
 
 exec mako
 #

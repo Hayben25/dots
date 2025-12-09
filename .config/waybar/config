@@ -4,22 +4,9 @@
     "height": 27,
 
 
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
-    "modules-center": ["backlight", "clock", "pulseaudio"],
-    "modules-right": ["network", "temperature", "battery", "custom/media" ,"tray"],
-	"custom/media": {
-    	"format": "{icon} {}",
-    	"escape": true,
-    	"return-type": "json",
-	    "max-length": 40,
-	    "on-click": "playerctl play-pause",
-	    "on-click-right": "playerctl stop",
-	    "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
-	    "on-scroll-up": "playerctl next",
-	    "on-scroll-down": "playerctl previous",
-	    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
-},
-				
+    "modules-left": ["sway/workspaces", "river/tags", "sway/mode", "sway/window", "river/window"],
+    "modules-center": ["backlight", "custom/distro", "clock", "pulseaudio"],
+    "modules-right": ["network", "temperature", "battery", "tray"],
 	"sway/workspaces": {
         "disable-scroll": true,
         "disable-markup": true,
@@ -27,14 +14,25 @@
 },
 
 
+	"custom/distro" :{
+		"format" : " {icon} ",
+		"format-icons" : {"default": "\udb82\udce8"},	
+		"on-click": "ghostty -e btop",
+	},
 	"sway/window": {
     	"format": "{}",
     	"max-length": 150
 },
 
-
-
-
+	"river/window": {
+		"format": "{}",
+		"max-length": 150
+},
+	"river/tags": {
+		"format": "{}",
+		"tag-labels": ["1","2","3","4","5", "6", "7","8","9"],
+		"hide-vacant": true
+},
     "tray": {
         "icon-size": 18,
         "spacing": 15
@@ -57,10 +55,7 @@
               "critical": 20
 },
 
-        "format": "{icon}   {capacity}%",
-        "format-good": "{icon}   {capacity}%", 
-        "format-full": "   {capacity}%",
-        "format-critical": "{icon} {capacity}%",
+        "format": "{icon}  {capacity}%",
         "format-icons": ["", "", "", "", ""],
         "interval": 30,
         "tooltip-format" : "{timeTo}, health: {health}%, power: {power} watts"

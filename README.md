@@ -3,7 +3,7 @@
 Welcome to my dots!
 
 [Features](#Features)
-[Required Packages](#Required Packages)
+[Required Packages](#Required-Packages)
 [Installation](#Installation)
 [Usage](#Usage)
 

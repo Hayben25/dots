@@ -18,6 +18,7 @@ Welcome to my dots!
 ## Required Packages
 
 - All of them
+  - [stow](https://github.com/aspiers/stow) - configuration syncing
   - [jetbrains-mono-nerd](https://www.jetbrains.com/lp/mono/) - font
   - [ghostty](https://ghostty.org/) - terminal
   - [fish](https://fishshell.com/) - shell

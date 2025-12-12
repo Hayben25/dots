@@ -1,2 +1,2 @@
 picom -b &
-exec dbus-launch --exit-with-session dwm
+exec oxwm

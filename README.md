@@ -17,7 +17,7 @@ Welcome to my dots!
 
 ## Required Packages
 
-Look in the [.config/README.md](https://github.com/Hayben25/dots/.config/README.md)
+Look in the [.config/README.md](https://github.com/Hayben25/dots/blob/all/.config/README.md)
 
 ## Installation
 

@@ -14,6 +14,19 @@ Welcome to my dots!
 - Preconfigured lazyvim and helix
 - A customized pacman.conf (I literally just turned on colors and had it do 5 packages at once)
 
+## Supported DE's
+
+### X11
+
+oxwm
+dwm
+
+### Wayland
+
+Cosmic
+Sway
+River
+
 ## Required Packages
 
 Look in the [.config/README.md](https://github.com/Hayben25/dots/blob/all/.config/README.md)
@@ -32,6 +45,10 @@ Apply the config with GNU/stow
 ```
 
 Then reload and you should be good to go!
+
+## TODO
+
+- Move wayland DE's over to rofi
 
 ## Future additions
 

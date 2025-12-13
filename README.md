@@ -17,28 +17,7 @@ Welcome to my dots!
 
 ## Required Packages
 
-- All of them
-  - [stow](https://github.com/aspiers/stow) - configuration syncing
-  - [jetbrains-mono-nerd](https://www.jetbrains.com/lp/mono/) - font
-  - [ghostty](https://ghostty.org/) - terminal
-  - [fish](https://fishshell.com/) - shell
-  - [omf](https://github.com/oh-my-fish/oh-my-fish) - makes shell pretty
-  
-- Wayland DEs (sway, river)
-  - [tofi](https://github.com/philj56/tofi) - dmenu
-  - [waybar](https://github.com/Alexays/Waybar) - bar
-
-- X11 DEs (dwm)
-  - [rofi](https://github.com/davatorium/rofi) - dmenu
-  - [picom](https://github.com/yshui/picom) - composistor
-    - fixes screen tearing (sometimes)
-      - see propietary drivers/nvidia for more information
-
-- For fun!
-  - [btop](https://github.com/aristocratos/btop) - pretty system monitoring
-  - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
-    - https://www.reddit.com/r/unixporn/
-  
+Look in the [.config/README.md](https://github.com/Hayben25/dots/.config/README.md)
 
 ## Installation
 

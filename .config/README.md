@@ -57,7 +57,6 @@ $ yay -S amd-ucode base-devel brightnessctl devtools efibootmgr firefox git gree
 Add the only if xorg/wayland utilities as your wm requires. Add your wm of choice by installing with yay -S <DE>-git
 After linux-cachyos is installed you can remove the linux package
 
-> [NOTE]
 > You need git and base-devel but that can be inculed in the pacstrap
 
 
@@ -79,5 +78,4 @@ If you would like a grub system instead:
 # grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
 ```
 
-> [NOTE]
 > Instead of esp put in yor boot partition

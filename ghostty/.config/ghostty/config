@@ -1,0 +1,7 @@
+theme = "iTerm2 Solarized Dark"
+shell-integration=fish
+font-size=20
+font-family="JetBrainsMonoNL"
+gtk-titlebar = false
+confirm-close-surface=false
+resize-overlay="never"

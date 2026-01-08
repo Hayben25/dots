@@ -1,0 +1,7 @@
+
+@theme "/usr/share/rofi/themes/solarized.rasi"
+configuration {
+	modi: "drun,calc,combi";
+	font: "JetBrainsMonoNerd 20";
+	combi-modi: "drun,calc";
+}

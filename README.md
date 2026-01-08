@@ -2,10 +2,7 @@
 
 Welcome to my dots!
 
-[Features](#Features)
-[Required Packages](#Required-Packages)
-[Installation](#Installation)
-
+[Features](#Features) [Required Packages](#Required-Packages) [Installation](#Installation)
 
 ## Features
 
@@ -18,14 +15,11 @@ Welcome to my dots!
 
 ### X11
 
-oxwm
-dwm
+oxwm dwm
 
 ### Wayland
 
-Cosmic
-Sway
-River
+Cosmic Sway River
 
 ## Required Packages
 
@@ -34,26 +28,29 @@ Look in the [.config/README.md](https://github.com/Hayben25/dots/blob/all/.confi
 ## Installation
 
 Clone the repo and [install dependencies](https://github.com/Hayben25/dots/blob/all/.config/README.md)
+
 ```
   git clone https://github.com/Hayben25/dots .dots
   cd .dots
 ```
 
-Apply the config with GNU/stow
+Apply the config modules you would like to use with GNU/stow
+
 ```
-  stow --adopt .
+  stow ghostty dwm sway
 ```
 
 Then reload and you should be good to go!
 
 ## TODO
 
-- Move wayland DE's over to rofi
+- Maybe get a little more declarative
 
 ## Future additions
 
 - Gnome
 - Hyprland
 - i3
+- Something on top of river as a composistor?
 - KDE?
 - Multiple distro?

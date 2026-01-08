@@ -1,0 +1,27 @@
+[config]
+
+[templates.ghostty]
+input_path = 'templates/ghostty'
+output_path = '~/.config/ghostty/themes/Matugen'
+post_hook = 'pkill -SIGUSR2 ghostty'
+[templates.waybar]
+input_path = './templates/waybar'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+[templates.sway]
+input_path = 'templates/sway'
+output_path = '~/.config/sway/colors.conf'
+post_hook = 'swaymsg reload'
+
+[templates.rofi]
+input_path = 'templates/rofi'
+output_path = '~/.config/rofi/colors.rasi'
+
+
+[templates.mako]
+input_path = 'templates/mako'
+output_path = '~/.config/mako/mako-colors'
+post_hook = 'makoctl reload'
+[templates.helix]
+input_path = 'templates/helix'
+output_path = '~/.config/helix/themes/matugen.toml'

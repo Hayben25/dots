@@ -1,0 +1,11 @@
+#!/bin/sh
+
+params="root=/dev/nvme0n1p3 rootfstype=ext4 rw quiet\
+	initrd=\initramfs-stable"
+
+efibootmgr --create --label "linux" \
+	--disk /dev/nvme0n1 \
+	--part 1
+	--loader /vmlinuz-stable \
+	--unicode "${params}" \
+	--verbose
